@@ -11,6 +11,8 @@ import os
 # ログ設定
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+tasuketsu_id = "yRQlxbBfWxdBhlO3FVT6"
+
 # Excelファイルの設定
 excel_file = 'project_votes.xlsx'
 
@@ -18,7 +20,7 @@ excel_file = 'project_votes.xlsx'
 options = webdriver.ChromeOptions()
 options.add_argument("--headless=new")
 driver = webdriver.Chrome(options=options)
-driver.get('https://tasuketsu.com/result/yRQlxbBfWxdBhlO3FVT6')
+driver.get('https://tasuketsu.com/result/'+tasuketsu_id)
 
 # 画像をクリックして、必要な要素が表示されるのを待機
 try:
